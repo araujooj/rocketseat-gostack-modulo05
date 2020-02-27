@@ -99,3 +99,34 @@ strong {
 
 }
 `
+export const Footer = styled.div`
+padding-top: 10px;
+margin: 15px 10px;
+display: flex;
+flex-direction:row;
+justify-content: space-between;
+
+button{
+  background: transparent;
+  border-color: transparent;
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+`
+
+export const Filter = styled.div`
+margin-right: 25px;
+button {
+  margin-left: 10px;
+  margin-top: 15px;
+  background: #7159c1;
+  width: 75px;
+  height: 25px;
+  border-width: 0.5px;
+  color: #fff;
+  align-self: center;
+  border-width:0;
+}
+`

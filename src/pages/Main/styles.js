@@ -20,7 +20,9 @@ export const Container = styled.div`
   }
 `;
 
-export const Form = styled.form`
+export const Form = styled.form.attrs(props => ({
+  disabled: props.error
+}))`
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -32,6 +34,13 @@ export const Form = styled.form`
     border-radius: 5px;
     font-size: 16px;
   }
+
+  &[disabled] {
+   input{
+    border: 0.5px solid #c1002e
+   }
+  }
+
 `;
 
 const rotate = keyframes`
@@ -49,6 +58,7 @@ export const SubmitButton = styled.button.attrs(props => ({
   disabled: props.loading,
 }))`
   background: #7159c1;
+  border-color: transparent;
   margin-left: 10px;
   border-radius: 4px;
   padding: 0 15px;
